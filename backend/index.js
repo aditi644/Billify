@@ -1,4 +1,4 @@
-<<<<<<< HEAD:backend/src/index.js
+
 import express from 'express';
 import authRoutes from './routes/auth.route.js'
 import messageRoutes from './routes/message.route.js'
