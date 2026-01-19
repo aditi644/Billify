@@ -1,6 +1,7 @@
 import express from 'express';
 import authRoutes from './routes/auth.route.js'
 import messageRoutes from './routes/message.route.js'
+import invoiceRoutes from './routes/invoices.route.js'
 import dotenv from 'dotenv'
 import { connectDB } from './lib/db.js';
 import cookieParser from 'cookie-parser';
@@ -8,7 +9,7 @@ import cors from 'cors'
 import { app, server } from './lib/socket.js';
 import path from "path"
 
-dotenv.config();
+dotenv.config({ path: "../.env" });
 
 
 app.use(express.json());
@@ -23,6 +24,7 @@ const _dirname = path.resolve();
 
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes)
+app.use("/api/invoices", invoiceRoutes)
 
 if (process.env.NODE_ENV == "production"){
     app.use(express.static(path.join(_dirname, "../frontend/dist")));

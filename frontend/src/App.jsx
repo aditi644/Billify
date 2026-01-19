@@ -10,6 +10,8 @@ import { useEffect } from "react";
 import {Loader} from "lucide-react"
 import { Toaster } from "react-hot-toast";
 import { useThemeStore } from "./store/useThemeStore.js";
+import AddInvoice from "../components/AddInvoice.jsx";
+import EditInvoice from "../components/EditInvoice.jsx";
 
 
 const App = () => {
@@ -38,6 +40,8 @@ const App = () => {
       <Route path="/login" element={!authUser ? <LoginPage/> : <Navigate to="/"/>}/>
       <Route path="/settings" element={<SettingsPage/>}/>
       <Route path="/profile" element={authUser ? <ProfilePage/> : <Navigate to="/login"/>}/>
+      <Route path="/add-invoice" element={<AddInvoice />} />
+      <Route path="/edit-invoice" element={<EditInvoice />} />
     </Routes>
 
     <Toaster/>
