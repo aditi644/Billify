@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useAuthStore } from "../src/store/useAuthStore";
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
-import AuthImagePattern from '../components/AuthImagePattern';
+
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
