@@ -39,7 +39,7 @@ server.listen(PORT, () => {
     console.log("Server is running on port PORT:" + PORT);
     connectDB();
 });
-=======
+
 import express from 'express';
 import authRoutes from './src/routes/auth.route.js'
 import messageRoutes from './src/routes/message.route.js'
@@ -81,4 +81,4 @@ server.listen(PORT, () => {
     connectDB();
 
 });
->>>>>>> 6668b755306d372fff53573e641b9ee8d30f2ccc:backend/index.js
+
