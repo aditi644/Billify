@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from "react";
 import { useAuthStore } from "../src/store/useAuthStore";
 import { Link } from "react-router-dom";
+import AuthImagePattern from '../components/AuthImagePattern';
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
 
 
